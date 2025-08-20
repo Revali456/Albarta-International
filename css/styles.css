@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: #f7f9fc;
+    color: #222;
+}
+
+header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+}
+
+.navbar h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: #2a7be4;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2a7be4;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #1a4e8a;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background: #eaf3fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.hero-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    background: rgba(42,123,228,0.7);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+}
+
+.hero-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.about-section {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.about-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2a7be4;
+    margin-top: 0;
+}
+
+.team {
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.member {
+    background: #eaf3fb;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border: 3px solid #2a7be4;
+}
+
+.member h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0.2rem 0;
+    color: #1a4e8a;
+}
+
+.member p {
+    font-size: 0.95rem;
+    color: #444;
+    margin: 0;
+}
+
+footer {
+    background: #2a7be4;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    font-family: 'Open Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2d3e50;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f8fafc;
+    transition: border-color 0.2s;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 0.25rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0077b6;
+    outline: none;
+    background: #fff;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Button group styling */
+.form-btn-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.submit-btn,
+.reset-btn {
+    padding: 0.85rem 2.5rem;
+    background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    font-family: 'Montserrat', Arial, sans-serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.submit-btn:hover,
+.reset-btn:hover {
+    background: linear-gradient(90deg, #023e8a 0%, #0096c7 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.reset-btn {
+    background: linear-gradient(90deg, #adb5bd 0%, #ced4da 100%);
+    color: #2d3e50;
+}
+
+.reset-btn:hover {
+    background: linear-gradient(90deg, #6c757d 0%, #adb5bd 100%);
+    color: #fff;
+}

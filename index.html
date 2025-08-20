@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albarta International</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background: #f8f9fa;
+            font-family: 'Open Sans', Arial, sans-serif;
+            color: #22223b;
+        }
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 1.2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .navbar h1 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 2rem;
+            color: #6c63ff;
+            margin-left: 2rem;
+            letter-spacing: 1px;
+        }
+        .navbar nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin-right: 2rem;
+        }
+        .navbar nav a {
+            text-decoration: none;
+            color: #22223b;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        .navbar nav a:hover {
+            color: #6c63ff;
+        }
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(90deg, #6c63ff 60%, #48bfe3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hero img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: auto;
+            opacity: 0.25;
+            object-fit: cover;
+            z-index: 1;
+        }
+        .hero-text {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            text-align: left;
+            max-width: 600px;
+            margin-left: 3rem;
+        }
+        .hero-text h2 {
+            font-size: 2.5rem;
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin-bottom: 1rem;
+        }
+        .hero-text p {
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .about-section {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(76, 70, 250, 0.06);
+            margin-bottom: 2.5rem;
+            padding: 2.5rem 2rem;
+            position: relative;
+        }
+        .about-section h2 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: #6c63ff;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .about-section p, .about-section ul {
+            font-size: 1.15rem;
+            color: #22223b;
+        }
+        .about-section ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+        .accent-section {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+            background: #f1f3f8;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(76, 70, 250, 0.04);
+            padding: 2rem;
+        }
+        .accent-section img {
+            width: 320px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(76, 70, 250, 0.08);
+        }
+        .accent-section .accent-text {
+            flex: 1;
+        }
+        .accent-section .accent-text h3 {
+            color: #6c63ff;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .accent-section .accent-text p {
+            font-size: 1.1rem;
+            color: #22223b;
+        }
+        footer {
+            background: #22223b;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+        .research-reports-section {
+            max-width: 1200px;
+            margin: 3rem auto 2rem auto;
+            padding: 0 2rem;
+        }
+        .research-reports-title {
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: #6c63ff;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .research-reports-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .research-report-card {
+            position: relative;
+            width: 340px;
+            height: 220px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(76, 70, 250, 0.10);
+            cursor: pointer;
+            background: #fff;
+            transition: box-shadow 0.2s;
+        }
+        .research-report-card:hover {
+            box-shadow: 0 8px 32px rgba(76, 70, 250, 0.18);
+        }
+        .report-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.3s;
+            display: block;
+        }
+        .research-report-card:hover .report-image {
+            filter: blur(4px) brightness(0.7);
+        }
+        .report-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            padding: 2rem;
+            color: #fff;
+            text-align: center;
+            background: rgba(44, 44, 84, 0.55);
+        }
+        .research-report-card:hover .report-overlay {
+            opacity: 1;
+        }
+        .report-title {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .report-desc {
+            font-size: 1.05rem;
+        }
+        @media (max-width: 900px) {
+            .accent-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .accent-section img {
+                width: 100%;
+                max-width: 320px;
+                margin-bottom: 1.5rem;
+            }
+            .research-reports-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .research-report-card {
+                width: 100%;
+                max-width: 340px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1><i class="fa-solid fa-flask-vial"></i> Albarta International</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero">
+            <img src="img/hero-medtech.jpg" alt="Medical Technology Consulting">
+            <div class="hero-text">
+                <h2>Transforming Healthcare with Technology</h2>
+                <p>Your trusted partner in medical innovation and business strategy.</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="about-section">
+            <h2>Welcome to Albarta International</h2>
+            <p>We help healthcare organizations leverage cutting-edge technology to improve patient outcomes, streamline operations, and grow their business.</p>
+        </section>
+        <section class="accent-section">
+            <img src="img/about-innovation.jpg" alt="Innovation at Albarta International">
+            <div class="accent-text">
+                <h3><i class="fa-solid fa-lightbulb"></i> Innovation at Our Core</h3>
+                <p>We believe in harnessing the latest advancements in medical technology to deliver real-world impact. Our team is dedicated to continuous learning and creative problem-solving, ensuring our clients stay ahead in a rapidly evolving industry.</p>
+            </div>
+        </section>
+        <section class="about-section">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Expertise in medical technology and business consulting</li>
+                <li>Customized solutions for your unique needs</li>
+                <li>Proven track record of success</li>
+            </ul>
+        </section>
+        <section class="accent-section">
+            <div class="accent-text">
+                <h3><i class="fa-solid fa-users"></i> Client-Centric Approach</h3>
+                <p>Our partnerships are built on trust, transparency, and a deep understanding of our clients' unique needs. We work collaboratively to deliver tailored solutions that drive measurable results.</p>
+            </div>
+            <img src="img/about-client.jpg" alt="Client Collaboration">
+        </section>
+        <section class="research-reports-section">
+            <div class="research-reports-title">What We Look At</div>
+            <div class="research-reports-grid">
+                <div class="research-report-card">
+                    <img class="report-image" src="img/report1.webp" alt="AI in Healthcare">
+                    <div class="report-overlay">
+                        <div class="report-title">AI in Healthcare 2024</div>
+                        <div class="report-desc">Discover how artificial intelligence is revolutionizing patient care, diagnostics, and operational efficiency in the healthcare sector.</div>
+                    </div>
+                </div>
+                <div class="research-report-card">
+                    <img class="report-image" src="img/report2.jpg" alt="Digital Transformation">
+                    <div class="report-overlay">
+                        <div class="report-title">Digital Transformation</div>
+                        <div class="report-desc">Explore strategies for successful digital transformation in healthcare organizations, from cloud adoption to data-driven decision making.</div>
+                    </div>
+                </div>
+                <div class="research-report-card">
+                    <img class="report-image" src="img/report3.webp" alt="Future of MedTech">
+                    <div class="report-overlay">
+                        <div class="report-title">The Future of MedTech</div>
+                        <div class="report-desc">A look at emerging trends, technologies, and business models shaping the future of medical technology worldwide.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Albarta International. All rights reserved.</p>
+    </footer>
+</body>
+</html>
